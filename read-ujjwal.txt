@@ -1,0 +1,59 @@
+# PDFs
+#  ↓
+# LangChain Community Loaders
+#  ↓
+# RecursiveCharacterTextSplitter
+#  ↓
+# MiniLM Embeddings (384-dim)
+#  ↓
+# Pinecone v7
+#  ↓
+# Retriever
+#  ↓
+# Groq Llama 3.1
+#  ↓
+# LCEL RAG Chain
+
+
+
+Project Summary — Medical AI Chatbot (RAG-based)
+
+You built a Retrieval-Augmented Generation (RAG) Medical Chatbot using:
+
+Flask (Frontend + Backend)
+LangChain LCEL
+Groq Llama 3.1
+Pinecone Vector Database
+HuggingFace Embeddings
+PDF Knowledge Base
+
+The chatbot:
+
+Reads medical PDF documents
+Splits them into chunks
+Converts text into embeddings
+Stores embeddings in Pinecone
+Retrieves relevant context for user questions
+Uses Groq Llama 3.1 to generate accurate answers
+
+
+how to start it 
+(base) ujjwaljain@ujjwals-MacBook-Air End-to-end-Medical-Chatbot-using-Llama2-main % python app.py
+python 3.12.7
+
+we have used data as a book which was trained by embeding models like pinecone as a vector database then it is sent to embedd model "sentence-transformers/all-MiniLM-L6-v2" then with the help of pinecone api and groq api to return the resoonse this project included flask as backend to run the logic and html+css for frontend logic is wriiten in app.py storeindex.py is storing the data to poinecone whereas helper is used for creatingthe embedings 
+Project Explanation
+
+This project is a RAG-based Medical Chatbot built using Flask, LangChain, Pinecone, Groq, and HuggingFace embeddings.
+
+We used a medical book PDF dataset as the knowledge base for the chatbot.
+
+The workflow of the project is:
+
+The medical PDF book is loaded and split into smaller text chunks.
+These chunks are converted into vector embeddings using the embedding model:
+sentence-transformers/all-MiniLM-L6-v2
+The generated embeddings are stored inside Pinecone, which acts as the vector database.
+When a user asks a question, Pinecone performs semantic similarity search and retrieves the most relevant chunks from the stored medical data.
+The retrieved context is then passed to the Groq Llama 3.1 model through the Groq API to generate the final response.
+The backend logic is implemented using Flask, while the frontend UI is developed using HTML, CSS, Bootstrap, and JavaScript.
