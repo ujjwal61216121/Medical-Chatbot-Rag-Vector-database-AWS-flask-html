@@ -73,6 +73,8 @@ from flask import Flask, render_template, request
 
 from dotenv import load_dotenv
 import os
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 # =========================
 # LANGCHAIN IMPORTS
